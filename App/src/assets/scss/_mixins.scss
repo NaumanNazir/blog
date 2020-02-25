@@ -1,0 +1,19 @@
+// == Prefixes
+// Prefix choosen declarations for browsers you want to support.
+// @param $declarations (map) - sass map of css declarations to prefix
+// @param $property-prefixes (list) - space separeted sass list of vendor prefixes (w/out dashes)
+@mixin _prefix($declarations, $property-prefixes: webkit moz ms o) {
+  @each $property, $value in $declarations {          // Take property and value from each declaration
+    @each $property-prefix in $property-prefixes {    // Take each vendor prefix from list
+      -#{$property-prefix}-#{$property}: #{$value};   // Output each declaration with each property prefixed
+    }
+    #{$property}: #{$value};                          // Output declaration with unprefixed property (W3C standard)
+  }
+}
+
+// == Background size
+// To support multiple backgrounds mixin takes as argument a list of values as well as string.
+// @param $size (string|list) - size(s) for background image(s)
+@mixin _background-size($size...) {
+  @include _prefix((background-size: $size), (webkit moz ms));
+}

@@ -1,0 +1,27 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+// Colors
+$orange: #CC4B00;
+$blue: #004EAE !important;
+$gray: #767676;
+$gray-400:#CCCCCC;
+$gray-800: #333333;
+$white: #FFFFFF;
+
+// Spacer
+$spacer: 5px !default;
+$spacers: () !default;
+$spacers: map-merge((
+    0: 0,
+    1: $spacer,
+    2: ($spacer * 2),
+    3: ($spacer * 3),
+    4: ($spacer * 4),
+    5: ($spacer * 5)
+), $spacers);
+
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";

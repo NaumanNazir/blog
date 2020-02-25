@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+@import "~bootstrap/scss/mixins";
+@import '~bootstrap/scss/functions';
+@import "custom-variable";
+@import "typography";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.divider {
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid $gray-400;
+  width: 100%;
+}
+.btn-primary {
+  background-color: $blue;
+  color: $gray-400 !important;
+}
+.footer {
+  .alert {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+}
+.posts-accordion {
+  border: 0;
+  svg {
+    font-size: 18px;
+    color: $orange;
+  }
+}
+.posts .card{
+  border: 0;
+}
